@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <style>
+    li {
+      list-style: none;
+    }
+    li {
+      line-height: 30px;
+    }
+    .person {
+      display: inline-block;
+      width: 200px;
+    }
+    #box {
+      border: 1px solid black;
+      width: 500px;
+      padding: 30px;
+      /* 위/아래/좌/우 */
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+  <!-- <fieldset> -->
+    <h1>프론트엔드 개발자 지원서</h1>
+    <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+    <hr>
+    <h3>개인정보</h3>
+    <li>
+    <label for="name">이름</label>
+    <input type="text" id="name" class="person" placeholder="공백없이 입력하세요.">
+    <br>
+    <label for="number">연락처</label>
+    <input type="text" id="number" class="person">
+   </li>
+    <br>
+    <h3>지원 분야</h3>
+    <li>
+      <input type="radio" id="web" name="web">
+      <label for="web">웹 퍼블리싱</label>
+    </li>
+    <li>
+      <input type="radio" id="web1" name="web">
+      <label for="web1">웹 애플리케이션 개발</label>
+    </li>
+    <li>
+      <input type="radio" id="web2" name="web">
+      <label for="web2">개발 환경 개선</label>
+    </li>
+    <br>
+    <h3>지원 동기</h3>
+      <label for="memo" ></label>
+      <textarea id="memo" rows="6" cols="50" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea> 
+  <!-- </fieldset> -->
+  <br>
+  <button type="submit">접수하기</button>
+  <button type="reset">다시 쓰기</button>
+</div>
+</body>
+</html>

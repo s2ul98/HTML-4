@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <style>
+    /* 아래쪽 여백 주기 */
+    fieldset {
+      margin-bottom: 20px;
+    }
+    /* 필드셋 제목을 볼드체로 변경 */
+    legend {
+      font-weight: bold;
+    }
+    /* 목록 표기 제거 */
+    ul {
+      list-style: none;
+    }
+    /* 항목의 높이 변경 */
+    li {
+      line-height: 30px;
+    }
+    /* 클래스 선택자 (.)점 */
+    .shipping {
+      /* display: inline-block; */
+      float: left; /* display: inline-block + 왼쪽 정렬 */
+      width: 80px;
+    }
+    /* 아이디 선택자 (#)샾 */
+    #btn1 {
+      background-color: rgb(25, 105, 255); /* 배경색 */
+      color: white; /* 글자색 */
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h3>레드향 주문하기</h3>
+  <form action="">
+    <!-- fieldset : 폼 안에서 관련된 필드만 묶기 -->
+    <fieldset>
+      <legend>상품 선택</legend> <!-- 필드셋 제목 -->
+      <p><b>주문할 상품을 선택해주세요</b></p> <!-- p : 단락 / b : 강조 -->
+      <!-- 목록 -->
+       <ul>
+        <li>
+            <input type="checkbox" id="check1">
+            <label for="check1">선물용 3kg</label>
+          <input type="number" min="0" max="5">개 <small>(최대 5개)</small>
+        </li>
+
+        <li>
+          <input type="checkbox" id="check2">
+          <label for="check2">선물용 5kg</label>
+          <input type="number" min="0" max="3">개 <small>(최대 3개)</small>
+        </li>
+       </ul>
+
+       <!--  -->
+       <p><b>포장 선택</b></p>
+       <ul>
+        <li>
+          <!-- name을 사용하여 라디오 버튼을 그룹화 -->
+          <input type="radio" id="gift1" name="gift">
+          <label for="gift1">선물 포장</label>
+        </li>
+        <li>
+          <input type="radio" id="gift2" name="gift">
+          <label for="gift2">선물 포장 안함</label>
+        </li>
+       </ul>
+    </fieldset>
+
+    <fieldset>
+      <legend>배송 정보</legend>
+      <!-- 태ㅡ의 이름 : id class -->
+      <ul>
+        <li>
+          <label for="name" class="shipping">이름</label>
+          <input type="text" id="name" >
+        </li>
+
+        <li>
+          <label for="address" class="shipping">배송지</label>
+          <input type="text" id="address">
+        </li>
+
+        <li>
+          <label for="dday" class="shipping">배송일</label>
+          <input type="date" id="dday">
+        </li>
+
+        <li>
+          <label for="memo" class="shipping">메모</label>
+          <!-- rows : 줄 / col : 한줄에 들어가는 글자 수 -->
+          <textarea id="memo" rows="4" cols="10"></textarea>
+        </li>
+      </ul>
+    </fieldset>
+
+    <button type="submit" id="btn1">주문</button>
+    <button type="reset">취소</button>
+  </form>
+</body>
+</html>

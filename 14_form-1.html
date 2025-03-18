@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <style>
+    /* 라벨을 동일한 크기로 변경 */
+    label {
+      display: inline-block; /* 크기 변경 가능 */ 
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  
+  <h3>회원가입 폼</h3>
+  <!-- 서버주소 -->
+  <form action ="localhost:8080/register" method="post">
+
+    <p>
+      <label for="user_name">이름</label>
+      <!-- 데이터 전송을 위해 name 작성 -->
+       <!-- name은 key 사용자가 입력한 데이터는 value -->
+      <input type="text" id="user_name" name="user_name">
+    </p>
+
+    <p>
+      <label for="user_id">아이디</label>
+      <input type="text" id="user_id" name="user_id">
+    </p>
+
+    <p>
+      <label for="user_pw">패스워드</label>
+      <input type="password" id="user_pw" name="user_pw">
+    </p>
+
+    <!-- submit : 사용자가 입력한 데이터를 서버에 전송하는 버튼 -->
+    <input type="submit" value="등록">
+
+    <!-- reset : 폼 초기화 -->
+    <input type="reset" value="초기화">
+
+  </form>
+</body>
+</html>
+
+<!-- 
+label은 인라인 요소
+인라인 요소는 크기를 변경할 수 없다
+label의 크기를 변경할때는 display 속성을 변경해야 한다
+-->
